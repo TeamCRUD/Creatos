@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 #[a(href="/") Creators]
+    h2=title
+    form(action="/api/signin" method='POST')
+        .form-group
+            label(for="email") Email adress #[br]
+            input.from-control(type="email" name='email' placeholder='Email')
+        .form-group
+            label(for="password") Password #[br]
+            input(type="password" name='password' placeholder='Password')
+        button.btn.btn-default(type='submit') Sign In 
+    span Don't have an account? #[a(href="/signup") Sign up]
